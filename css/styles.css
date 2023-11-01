@@ -89,6 +89,7 @@ body {
     z-index: 99;
     transform: translateX(0);
     margin: 0;
+    /* height: 50px; */
 }
 
 .nav__list {

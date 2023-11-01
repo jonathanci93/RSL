@@ -2,24 +2,33 @@
 /** ----------------NAV FUNCTIONS-------- **/
 const navButton = document.querySelector('.nav__button');
 const navMenu = document.querySelector('.nav__container');
-navButton.addEventListener('click',()=> {
+const navLinks = document.querySelectorAll('.nav__link');
+navButton.addEventListener('click', () => {
     navMenu.classList.toggle('nav__container--active');
-    if(navMenu.classList.contains
-        ('nav__container--active')){
-            navButton.setAttribute('src', '././img/close.png')
-        }else {
-            navButton.setAttribute('src', './img/icon-hamburger.svg')
-        }
-})
-
-window.addEventListener('resize', ()=>{
-    const isMenuActive = document.querySelector('.nav__container--active');
-    if(isMenuActive) {
-        navMenu.classList.remove('nav__container--active')
-        
-        navButton.setAttribute('src', './img/icon-hamburger.svg' )
+    if (navMenu.classList.contains
+        ('nav__container--active')) {
+        navButton.setAttribute('src', '././img/close.png')
+    } else {
+        navButton.setAttribute('src', './img/icon-hamburger.svg')
     }
 })
+
+window.addEventListener('resize', () => {
+    const isMenuActive = document.querySelector('.nav__container--active');
+    if (isMenuActive) {
+        navMenu.classList.remove('nav__container--active')
+        navButton.setAttribute('src', './img/icon-hamburger.svg')
+    }
+})
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('nav__container--active')) {
+            navMenu.classList.remove('nav__container--active');
+            navButton.setAttribute('src', './img/icon-hamburger.svg');
+        }
+    });
+});
 
 /** ----------------SLIDER FUNCTIONS-------- **/
 const slider = document.querySelector("#slider");
