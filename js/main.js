@@ -32,17 +32,17 @@ navLinks.forEach(link => {
 });
 
 /** ----------------SLIDER FUNCTIONS-------- **/
-const slider = document.querySelector("#slider");
-let sliderSection = document.querySelectorAll(".slider__section");
+const slider = document.querySelector('#slider');
+let sliderSection = document.querySelectorAll('.slider__section');
 let sliderSectionLast = sliderSection[sliderSection.length - 1];
 
-const btnLeft = document.querySelector("#btn-left");
-const btnRight = document.querySelector("#btn-right");
+const btnLeft = document.querySelector('#btn-left');
+const btnRight = document.querySelector('#btn-right');
 
 slider.insertAdjacentElement('afterbegin', sliderSectionLast);
 
 function Next() {
-    let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
+    let sliderSectionFirst = document.querySelectorAll('.slider__section')[0];
     slider.style.marginLeft = "-200%";
     slider.style.transition = "all 0.5s";
     setTimeout(function () {
@@ -56,7 +56,7 @@ btnRight.addEventListener('click', function () {
 });
 
 function Prev() {
-    let sliderSection = document.querySelectorAll(".slider__section");
+    let sliderSection = document.querySelectorAll('.slider__section');
     let sliderSectionLast = sliderSection[sliderSection.length - 1];
     slider.style.marginLeft = "0";
     slider.style.transition = "all 0.5s";
