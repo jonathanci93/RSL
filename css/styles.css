@@ -325,6 +325,14 @@ body {
     border-bottom: 2.5px solid red;
     border-top: 2.5px solid red;
 }
+.contacto__media a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+}
+
 
 .contacto {
     display: flex;
@@ -355,9 +363,11 @@ body {
     display: flex;
     flex-direction: row;
 }
-
+.contacto__media img {
+    margin-right: 10px;
+}
 .contacto__media label {
-    margin: 10px 0px 0px 10px;
+    margin-top: 10px;
     font-weight: bold;
 }
 
